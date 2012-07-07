@@ -1,0 +1,68 @@
+{{define "title"}}about{{end}}
+
+{{define "headcontent"}}
+{{end}}
+
+{{define "bodycontent"}}
+<div class="row">
+  <div class="span12">
+    <div>Some of the technologies used for Koderank:</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6">
+    <dl>
+      <dt><a href="https://developers.google.com/appengine/">Google App Engine</a></dt><dd>App Engine team</dd>
+      <dt><a href="http://www.twilio.com/api/client">Twilio Client</a></dt><dd>Twilio</dd>
+      <dt><a href="http://golang.org">Go Language</a></dt><dd>The Go Authors</dd>
+      <dt><a href="http://developers.google.com/closure/library/">Google Closure Library</a></dt><dd>Closure Library team</dd>
+      <dt><a href="http://code.google.com/p/google-diff-match-patch/">Diff-Match-Patch</a></dt><dd>Neil Fraser</dd>
+      <dt><a href="http://codemirror.net">CodeMirror</a></dt><dd>Marijn Haverbeke</dd>
+      <dt><a href="https://github.com/mzgoddard/gojwt">GoJWT</a></dt><dd>Michael "Z" Goddard</dd>
+      <dt><a href="http://p.yusukekamiyamane.com/">Fugue Icons</a></dt><dd>Yusuke Kamiyamane</dd>
+      <dt><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></dt><dd>Mark Otto, Jacob Thornton</dd>
+    </dl>
+  </div>
+  <div class="span6">
+    <div class="row">
+      <div class="span2"><img src="/img/graphic/google-closure-library.png"></div>
+      <div class="span4"><img src="/img/graphic/twilio-powered-tag.png"></div>
+    </div>
+    <div class="row">
+      <div class="span2 offset1"><img src="/img/graphic/golang-gopher.png"></div>
+      <div class="span3"><img src="/img/graphic/appengine-powered-tag.gif"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <img src="/img/icon/medal.png" title="Woot.">One of five winners in Twilio's 
+  <a href="http://www.twilio.com/blog/2011/08/announcing-the-winners-of-the-first-five-live-contest.html">First Five Live</a> 
+  contest.
+  </div>
+</div>
+  
+<div class="row">
+  <div class="span12">
+    <img src="/img/icon/mail.png">
+    For questions or support, please contact Antonio Rodriguez at <span id="ipost"></span>.
+  </div>
+</div>
+  
+{{end}}
+
+{{define "script"}}
+
+<script>
+  var iPost = '<a href="mai';
+  iPost += 'lto:df00t.com">df';
+  iPost += '00t.com</a>';
+  document.getElementById('ipost').innerHTML = iPost.replace(/f0+/g,'ev@xhroo');
+</script>
+
+{{end}}
+
+
+

@@ -1,0 +1,18 @@
+
+// Rename to `appconfig.go`.
+// Define keys here.
+// Set source control to ignore.
+
+
+// This file contains keys and secure values.  If you find the developer
+// inadvertently committed this to a public repository, please notify them
+// immediately.
+
+package koderank
+
+const (
+  TWILIO_ACCOUNT_SID = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+  TWILIO_AUTH_TOKEN = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+  TWILIO_APP_SID = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+)
+

@@ -1,0 +1,77 @@
+{{define "title"}}whiteboard{{end}}
+
+{{define "headcontent"}}
+  
+  {{/* Twilio client library */}}
+  <script type="text/javascript" src="http://static.twilio.com/libs/twiliojs/1.0/twilio.min.js"></script>
+  
+  {{/* Codemirror */}}
+  <link rel="stylesheet" href="/css/codemirror/codemirror.css">
+  <script type="text/javascript" src="/js/codemirror.js"></script>
+
+  {{/* GAE Channel API.
+     Renamespaced to avoid collision with GCL.*/}}
+  <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+  <script type="text/javascript">
+    var appengine = goog.appengine;
+  </script>
+  
+{{end}}
+
+{{define "bodycontent"}}
+
+<div class="row">
+  {{if .IsInterviewer}}
+  <div class="span3"><img src="/img/icon/interviewer.png"> Interviewer</div>
+  <div class="span1 dashlights">
+      <img id="dash_edit_code" src="/img/icon/edit-code.png" title="Candidate Typing">
+  </div>
+  <div class="span6">
+    <div class="btn-group">
+      <button id="call" class="btn"><i class="icon-volume-up"></i> Call</button>
+      <button id="hangup" class="btn" disabled="disabled">
+          <i class="icon-volume-off"></i> Hangup</button>
+    </div>
+  </div>
+  {{else}}
+  <div class="span3"><img src="/img/icon/candidate.png"> Candidate</div>
+  <div class="span7 dashlights">
+      <img id="dash_voice_conn" src="/img/icon/voice-conn.png" title="Voice Connect">
+  </div>
+  {{end}}
+
+  <div class="span2">
+    <button id="testSettings" class="btn">
+        <i class="icon-wrench"></i> Test Settings</button>
+  </div>
+
+</div>
+
+<div class="row"></div>
+
+<textarea id="code_window" name="code_window">
+// Write code here
+
+
+
+</textarea>
+
+{{if .IsInterviewer}}
+<div class="row">
+  <div class="span12" id="candidate_link">
+    Send this link to the candidate: <a href="/whiteboard?x={{.Candidate}}">http://koderank.appspot.com/whiteboard?x={{.Candidate}}</a>
+  </div>
+</div>
+{{end}}
+
+{{end}}
+
+{{define "script"}}
+
+<script type="text/javascript">
+  new wb({{.IsInterviewer}}, '{{.Interviewer}}', '{{.Candidate}}', 
+      '{{.TwilioToken}}', '{{.ChannelToken}}');
+</script>
+
+{{end}}
+

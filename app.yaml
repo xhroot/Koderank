@@ -1,0 +1,41 @@
+application: APPLICATIONID
+version: VERSION
+runtime: go
+api_version: go1
+
+handlers:
+- url: /css
+  static_dir: view/css
+
+- url: /img/
+  static_dir: view/img/
+
+- url: /js
+  static_dir: view/js
+
+- url: /bootstrap
+  static_dir: view/bootstrap
+
+- url: /robots.txt
+  static_files: view/robots.txt
+  upload: view/robots.txt
+  mime_type: text/plain
+
+- url: /favicon.ico
+  static_files: view/img/graphic/favicon.ico
+  upload: view/img/graphic/favicon.ico
+  mime_type: image/vnd.microsoft.icon
+
+- url: /apple-touch-icon.png
+  static_files: view/img/graphic/apple-touch-icon.png
+  upload: view/img/graphic/apple-touch-icon.png
+  mime_type: image/png
+
+- url: /.*
+  script: _go_app
+
+skip_files: |
+ ^(.*/)?(
+ (plovr\.jar)|
+ )$
+
