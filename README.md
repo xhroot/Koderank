@@ -15,7 +15,4 @@ The Koderank source is written in Go language on the server side and Google Clos
 Linked libraries
 ----------------
 
-jwt.go was created by Michael Goddard, [GoJWT](https://github.com/mzgoddard/gojwt/).
-
-
-* 
+* jwt.go was created by Michael Goddard, [GoJWT](https://github.com/mzgoddard/gojwt/).
