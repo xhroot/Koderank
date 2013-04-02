@@ -3,7 +3,7 @@ Koderank
 
 * *Author*: Antonio Rodriguez, dev@xhroot.com
 * *Description*: Source code for Koderank interview tool
-* *License*: BSD
+* *License*: MIT
 * *Blog post*: http://www.xhroot.com/blog/2012/07/08/koderank/
 
 ###Live demo
